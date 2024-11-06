@@ -1,0 +1,141 @@
+/* Variables */
+
+:root {
+	--primary-bg-color: #272640;
+	--secondary-bg-color: #3e1f47;
+	--terciary-bg-color: #2b1833;
+	--btn-bg-color: #43408b;
+
+	--border-color: #c394d1;
+
+	--neutral-text-color: #cccccc;
+
+	--main-gradient: linear-gradient(
+		to right,
+		var(--primary-bg-color),
+		var(--secondary-bg-color),
+		var(--primary-bg-color)
+	);
+}
+
+/* Font classes */
+
+.lato {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.titles {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.quote {
+	font-family: 'Lato', sans-serif;
+	font-style: italic;
+	font-weight: 900;
+}
+
+/* header and footer styles */
+
+header,
+footer {
+	background-image: url(assets/bg/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.logo-img {
+	max-height: 50px;
+}
+
+ul {
+	list-style: none;
+}
+
+.menu-icon {
+	transform: scale(1.3);
+}
+
+/* Overlay para oscurecer un poco las ímagenes de fondo */
+header::before,
+footer::before {
+	background-color: black;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 55%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+footer * {
+	z-index: 2;
+}
+
+/* Crea una linea dentro del footer que separa la navegación de las redes */
+
+#footer-list::before {
+	background-color: white;
+	bottom: -15px;
+	content: '';
+	height: 1px;
+	left: 50%;
+
+	position: absolute;
+	transform: translateX(-50%);
+	width: 300px;
+}
+
+.fa-brands {
+	color: white;
+	transform: scale(1.6);
+}
+
+.nav-link:hover,
+.cart:hover {
+	transform: translateY(-3px);
+}
+
+.nav-link:active,
+.cart:active {
+	transform: translateY(6px);
+}
+
+/* extras */
+
+main {
+	background: var(--main-gradient);
+}
+
+.focus-ring {
+	--bs-focus-ring-color: #7b2cbf;
+	transition: transform 500ms !important;
+}
+
+/* 
+se utiliza una variable dentro de la clase para
+volver a ese valor luego de modificarlo en la media query.
+ */
+.pink-borders {
+	border: var(--initial-value);
+	--initial-value: 1px solid var(--border-color);
+}
+
+/* Utiliza la clase btn de bootstrap pero
+modifica algunos valores para que se asemeje mas al diseño. */
+.btn {
+	--bs-btn-bg: var(--btn-bg-color);
+	--bs-btn-hover-border-color: var(--bs-focus-ring-color);
+}
+
+.btn:hover {
+	background-color: var(--btn-bg-color);
+	transform: translateY(3px);
+}
