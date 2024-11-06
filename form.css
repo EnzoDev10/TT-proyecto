@@ -1,0 +1,41 @@
+#form-wrapper {
+	max-width: 750px;
+}
+
+#form-wrapper.pink-borders {
+	border: none;
+}
+
+#form-img-container {
+	background: linear-gradient(to right, #011307, #002b47, #011307);
+}
+
+form {
+	background-color: var(--terciary-bg-color);
+}
+
+#form-img-container,
+form {
+	max-width: 350px;
+}
+
+.form-control {
+	background-color: var(--primary-bg-color);
+}
+
+label {
+	color: var(--neutral-text-color);
+}
+
+@media screen and (min-width: 768px) {
+	#form-wrapper {
+		background-color: var(--terciary-bg-color);
+	}
+	#form-wrapper.pink-borders {
+		border: var(--initial-value);
+	}
+
+	form.pink-borders {
+		border: none;
+	}
+}

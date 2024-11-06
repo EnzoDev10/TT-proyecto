@@ -29,8 +29,9 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="general.css" />
+		<link rel="stylesheet" href="form.css" />
 
-		<title>Ecommerce Demo</title>
+		<title>Document</title>
 	</head>
 	<body class="lato text-light">
 		<header>
@@ -45,14 +46,14 @@
 						/>Galaxy</span
 					>
 					<button
-						class="navbar-toggler"
+						class="navbar-toggler focus-ring"
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarNav"
 						aria-controls="navbarNav"
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<i class="fa-solid fa-bars text-light w-100"></i>
+						<i class="fa-solid menu-icon fa-bars text-light w-100"></i>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav d-flex align-items-center ms-auto gap-3">
@@ -60,7 +61,7 @@
 								<a
 									class="nav-link p-2 focus-ring rounded link text-light"
 									aria-current="page"
-									href="#"
+									href="index.html"
 									>Inicio</a
 								>
 							</li>
@@ -80,7 +81,7 @@
 							</li>
 							<li class="nav-item">
 								<button
-									class="cart p-2 focus-ring rounded btn border-light d-flex align-items-center ms-md-5 text-light"
+									class="cart p-2 focus-ring rounded btn border-light d-flex align-items-center ms-md-2 text-light"
 								>
 									<i class="fa-solid fa-cart-shopping"></i>
 									<span id="num-objetos" class="ms-4">0</span>
@@ -92,66 +93,76 @@
 			</nav>
 		</header>
 		<main>
-			<section id="presentation" class="text-center py-5">
-				<h1 class="display-1 fw-normal titles">Libreria E</h1>
-			</section>
-			<!-- 			<section id="productos">
-				<div class="container-md">
-					<div class="card mb-3">
-						<div class="row g-0">
-							<div class="col-md-4 w-50">
-								<img
-									src="assets/covers/The-scarlet-letter.jpg"
-									class="rounded-4-start w-100"
-									alt="..."
+			<section id="formulario">
+				<div
+					class="container-sm align-items-center flex-column text-center p-4"
+				>
+					<h1 class="my-4">
+						¿Tienes alguna sugerencia o una queja sobre el servicio? Contactanos
+						a través del siguiente formulario
+					</h1>
+					<div
+						id="form-wrapper"
+						class="d-flex flex-column flex-md-row gap-4 p-md-4 rounded-4 pink-borders m-auto"
+					>
+						<div
+							id="form-img-container"
+							class="d-flex flex-column align-items-center gap-5 p-4 pt-5 rounded-4 m-auto"
+						>
+							<img
+								src="assets/icons/planet-earth.svg"
+								alt=""
+								aria-hidden="true"
+								class="w-75"
+							/>
+							<p class="m-0 fs-5">
+								Una vez realizado tu pedido serás avisado en no mas de tres días
+								terrestres.
+							</p>
+						</div>
+
+						<form class="p-3 mx-auto rounded-4 pink-borders text-start">
+							<p class="m-1 mt-md-0 text-center">
+								Ingresa un nombre, correo y el mensaje/pedido que quieras
+								enviarnos.
+							</p>
+							<div class="mb-2">
+								<label for="nombre" class="form-label text-">Nombre</label>
+								<input
+									type="text"
+									id="nombre"
+									class="form-control rounded pink-borders w-100 focus-ring text-light"
 								/>
 							</div>
-							<div class="col-md-8">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										This is a wider card with supporting text below as a natural
-										lead-in to additional content. This content is a little bit
-										longer.
-									</p>
-									<p class="card-text">
-										<small class="text-body-secondary"
-											>Last updated 3 mins ago</small
-										>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card mb-3">
-						<div class="row g-0">
-							<div class="col-md-4 w-50">
-								<img
-									src="assets/covers/The-scarlet-letter.jpg"
-									class="rounded-4-start w-100"
-									alt="..."
+							<div class="mb-2">
+								<label for="email" class="form-label">Email *</label>
+								<input
+									type="email"
+									id="email"
+									required
+									class="form-control rounded pink-borders w-100 focus-ring text-light"
 								/>
 							</div>
-							<div class="col-md-8">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">
-										This is a wider card with supporting text below as a natural
-										lead-in to additional content. This content is a little bit
-										longer.
-									</p>
-									<p class="card-text">
-										<small class="text-body-secondary"
-											>Last updated 3 mins ago</small
-										>
-									</p>
-								</div>
+							<div class="">
+								<label for="mensaje" class="form-label">Mensaje *</label>
+								<textarea
+									name="mensaje"
+									id="mensaje"
+									rows="5"
+									required
+									class="form-control rounded pink-borders w-100 focus-ring text-light"
+								></textarea>
 							</div>
-						</div>
+							<button
+								type="submit"
+								class="btn pink-borders focus-ring w-100 p-2 mt-2 text-light"
+							>
+								Enviar
+							</button>
+						</form>
 					</div>
 				</div>
-			</section> -->
-			<section id="reseñas"></section>
+			</section>
 		</main>
 		<footer class="text-light p-3">
 			<div
@@ -183,7 +194,7 @@
 						>
 							<li class="nav-item">
 								<a
-									href="#"
+									href="index.html"
 									class="nav-link p-2 focus-ring rounded link text-light"
 									>Inicio</a
 								>
@@ -217,17 +228,17 @@
 					<nav id="socials" class="d-flex justify-content-center">
 						<ul class="d-flex gap-5 mt-3 p-0">
 							<li class="nav-item">
-								<a href="#" class="nav-link focus-ring rounded"
+								<a href="#" class="nav-link focus-ring rounded-4"
 									><i class="p-3 fa-brands fa-facebook"></i
 								></a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link focus-ring rounded"
+								<a href="#" class="nav-link focus-ring rounded-4"
 									><i class="p-3 fa-brands fa-x-twitter"></i
 								></a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link focus-ring rounded"
+								<a href="#" class="nav-link focus-ring rounded-4"
 									><i class="p-3 fa-brands fa-instagram"></i
 								></a>
 							</li>
