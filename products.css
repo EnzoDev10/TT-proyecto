@@ -1,3 +1,29 @@
+.dropdown-menu {
+	background-color: var(--primary-bg-color);
+	--bs-body-color: #fff;
+}
+
+.dropdown-item {
+	--bs-dropdown-link-hover-color: #000;
+}
+
+.card {
+	max-width: 250px;
+	background-color: var(--primary-bg-color);
+}
+
+.card img {
+	border-radius: 1rem 1rem 0 0;
+}
+
+.h6 {
+	color: var(--neutral-text-color);
+}
+
+.price {
+	color: #99d98c;
+}
+
 .grid-container {
 	display: grid;
 	gap: 1rem;
@@ -22,6 +48,14 @@
 }
 
 @media screen and (min-width: 768px) {
+	.card {
+		max-width: 450px;
+	}
+
+	.card img {
+		border-radius: 1rem 0 0 1rem;
+	}
+
 	.grid-container {
 		max-width: 725px;
 		grid-template-columns: repeat(3, 1fr);
