@@ -26,12 +26,6 @@
 	font-weight: 400;
 }
 
-.titles {
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
-
 .quote {
 	font-family: 'Lato', sans-serif;
 	font-style: italic;
@@ -131,6 +125,7 @@ volver a ese valor luego de modificarlo en la media query.
 /* Utiliza la clase btn de bootstrap pero
 modifica algunos valores para que se asemeje mas al diseño. */
 .btn {
+	--bs-btn-color: #fff;
 	--bs-btn-bg: var(--btn-bg-color);
 	--bs-btn-hover-border-color: var(--bs-focus-ring-color);
 }
