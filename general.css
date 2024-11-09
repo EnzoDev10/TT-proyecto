@@ -110,9 +110,10 @@ main {
 
 .focus-ring {
 	--bs-focus-ring-color: #7b2cbf;
+	--bs-focus-ring-width: 3px;
+
 	transition: transform 500ms !important;
 }
-
 /* 
 se utiliza una variable dentro de la clase para
 volver a ese valor luego de modificarlo en la media query.
