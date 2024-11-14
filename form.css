@@ -20,7 +20,7 @@ form {
 }
 
 .form-control {
-	background-color: var(--primary-bg-color);
+	--bs-body-bg: var(--primary-bg-color);
 }
 
 label {
