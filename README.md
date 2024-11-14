@@ -1,27 +1,12 @@
-# TT-proyecto
+# Galaxy Library
 
-Lista de apis posibles
+Bienvenido al repositorio de mi proyecto final del curso de Frontend con JavaScript.
 
-Open library Api
-https://openlibrary.org/dev/docs/api/books
+## Concepto
 
-gutendex genera un json con toda la data de un libro
-- https://gutendex.com/?ref=public_apis
-Ventaja:
-- ofrece imagenes de portada para cada libro
+Este proyecto tiene como concepto una libreria ficticia que basa su apariencia en una galaxia. Utiliza una paleta de colores inspirada en cuerpos celestes, estrellas y demás.
+En cuanto a lo tecnico, se utilizó bootstrap para los estilos y figma para crear el diseño. En cuanto a la API que se utilizará en un futuro, todavia no esta decidida.
 
-stephen-king-api genera un json con toda la data de los libros de stephen king
--https://stephen-king-api.onrender.com/?ref=public_apis
+## Objetivo
 
-
-### TODO
-- Crea el footer y header bien completo ✅
-    - agregar estilos hover y active para todo
-    - Agregar versión desktop para el footer
-
-- Crear el formulario y configurar Formspree
-    - Crear nuevos archivos y desarrollarlos
-    - Crear el form en formspree
-
-
-}
+El objetivo de este proyecto era mejorar mis capacidades para diseñar y practicar con bootstrap.
