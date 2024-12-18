@@ -59,7 +59,7 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 	}
 	currentTopic.textContent = 'Cargando...';
 
-	fetch(`http://gutendex.com/books?${thingToSearch}`)
+	fetch(`https://gutendex.com/books?${thingToSearch}`)
 		// Con "?limit=20" se limita la cantidad de bookos a 20
 		.then((response) => response.json())
 		.then((data) => {
