@@ -9,7 +9,7 @@
 }
 
 .earth {
-	background-image: url(../assets/bg/earth-and-trail.svg);
+	background-image: url('./assets/bg/earth-and-trail.svg');
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 		display: inline-block;
 		width: 20%;
 		height: 20%;
-		background-image: url('../assets/icons/moon-only.svg');
+		background-image: url('./assets/icons/moon-only.svg');
 		background-repeat: no-repeat;
 		position: absolute;
 		background-size: contain;
