@@ -32,6 +32,10 @@
 	font-weight: 900;
 }
 
+.price {
+	color: #99d98c;
+}
+
 /* header and footer styles */
 
 header,
@@ -131,7 +135,7 @@ modifica algunos valores para que se asemeje mas al diseño. */
 	--bs-btn-hover-border-color: var(--bs-focus-ring-color);
 }
 
-.btn:hover {
+.btn:not(.drop-btn):hover {
 	background-color: var(--btn-bg-color);
 	transform: translateY(3px);
 }
