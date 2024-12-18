@@ -1,0 +1,95 @@
+.shooping-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.cart-container,
+.checkout {
+	background: var(--terciary-bg-color);
+	max-width: 400px;
+	min-width: 325px;
+	margin: 0 auto;
+}
+
+.checkout {
+	height: fit-content;
+}
+
+.cart-container {
+	position: relative;
+
+	p {
+		width: fit-content;
+	}
+}
+
+.book-data-headers {
+	display: grid;
+	grid-template-columns: 2fr 1fr 0.5fr;
+
+	position: relative;
+}
+
+.column {
+	padding: 20px 0;
+}
+
+.product-cover {
+	min-width: 70px;
+	max-width: 70px;
+	height: 100px;
+	background-color: var(--neutral-text-color);
+}
+
+.product {
+	position: relative;
+	display: grid;
+	grid-template-columns: 2fr 1fr 0.5fr;
+
+	&::before {
+		content: '';
+		height: 1px;
+		position: absolute;
+		background-color: var(--border-color);
+		width: 95%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.checkout-data {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+
+	&::before {
+		content: '';
+		height: 1px;
+		position: absolute;
+		background-color: var(--border-color);
+		width: 92%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.shooping-container {
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.cart-container,
+	.checkout {
+		margin: 0;
+	}
+	.cart-container {
+		max-width: none;
+		width: 100%;
+	}
+}
