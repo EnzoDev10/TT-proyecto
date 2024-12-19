@@ -10,7 +10,7 @@
 .modal {
 	background: var(--terciary-bg-color);
 	max-width: 400px;
-	min-width: 325px;
+	min-width: 290px;
 	margin: 0 auto;
 }
 
