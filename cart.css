@@ -54,7 +54,7 @@
 		height: 1px;
 		position: absolute;
 		background-color: var(--border-color);
-		width: 95%;
+		width: 100%;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
