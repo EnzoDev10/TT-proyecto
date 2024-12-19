@@ -97,13 +97,16 @@ footer * {
 }
 
 .nav-link:hover,
-.cart:hover {
-	transform: translateY(-3px);
+.cart-link:hover {
+	transform: translateY(-4px);
 }
 
 .nav-link:active,
-.cart:active {
+.cart-link:active {
 	transform: translateY(6px);
+}
+.cart-link:hover {
+	background-color: var(--btn-bg-color);
 }
 
 /* extras */
@@ -133,6 +136,7 @@ modifica algunos valores para que se asemeje mas al diseño. */
 	--bs-btn-color: #fff;
 	--bs-btn-bg: var(--btn-bg-color);
 	--bs-btn-hover-border-color: var(--bs-focus-ring-color);
+	--bs-btn-active-border-color: transparent;
 }
 
 .btn:not(.drop-btn):hover {

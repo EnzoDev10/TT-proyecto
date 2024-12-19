@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-const modal = document.querySelector('#modal');
+const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const openBtn = document.querySelector('#buyBtn');
 const closeBtn = document.querySelector('#closeBtn');

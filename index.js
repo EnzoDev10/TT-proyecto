@@ -1,6 +1,6 @@
 let booksContainer = document.getElementById('books-container');
 let currentTopic = document.getElementById('current-topic');
-let cartLinks = document.querySelectorAll('.cart-link');
+let cartLinks = document.querySelectorAll('.cart-link drop-btn');
 document.addEventListener('DOMContentLoaded', () => {
 	fetchBooks();
 });

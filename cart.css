@@ -80,7 +80,7 @@
 
 /* ! terminar el modal que da los links para los libros. */
 
-#modal {
+.modal {
 	display: initial;
 	position: absolute;
 	top: 50%;
