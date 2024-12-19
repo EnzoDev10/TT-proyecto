@@ -64,10 +64,8 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 		.then((response) => response.json())
 		.then((data) => {
 			booksData = data.results;
-
 			booksContainer.innerHTML = '';
 			for (let i = 0; i < 6; i++) {
-				const randomPrice = Math.floor(Math.random() * (100 - 10 + 1));
 				// agrega cards por cada element del json obtenido en la petición
 				const cardDiv = document.createElement('div');
 
@@ -76,11 +74,9 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 					t: shorterTitles(booksData[i].title),
 					a: booksData[i].authors[0].name,
 					b: booksData[i].formats['text/html'],
-					p: randomPrice,
+					p: Math.floor(Math.random() * (100 - 10 + 1)),
 				};
-
 				cardDiv.className = 'book';
-
 				cardDiv.innerHTML = `
             <div class="card mb-3 rounded-4 pink-borders">
 				<div class="row g-0">
