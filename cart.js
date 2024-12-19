@@ -34,13 +34,20 @@ function removeProduct(productId, cartTitle) {
 	updateAmount();
 }
 
+let buyBtn = document.querySelector('#buyBtn');
+
+buyBtn.addEventListener('click', () => {
+	let cartContent = JSON.parse(localStorage.getItem('cart'));
+	if (cartContent.length) {
+	}
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 	let productList = document.querySelector('.product-list');
 	let cartContent = JSON.parse(localStorage.getItem('cart')) || [];
 
 	for (let i = 0; i < cartContent.length; i++) {
 		const productDiv = document.createElement('div');
-
 		productDiv.id = `product-N${i}`;
 		productDiv.className = 'product';
 
@@ -81,3 +88,54 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 });
+
+const modal = document.querySelector('#modal');
+const overlay = document.querySelector('.overlay');
+const openBtn = document.querySelector('#buyBtn');
+const closeBtn = document.querySelector('#closeBtn');
+
+function openModal() {
+	let cartContent = JSON.parse(localStorage.getItem('cart'));
+
+	// if the modal is not visible, opens it and shows the blur effect
+	if (modal.classList.contains('hidden') && cartContent.length) {
+		modal.classList.remove('hidden');
+		overlay.classList.remove('hidden');
+
+		const linksContainer = document.querySelector('.links-container');
+		linksContainer.innerHTML = '';
+		for (let i = 0; i < cartContent.length; i++) {
+			const link = document.createElement('a');
+			link.id = `link-N${i}`;
+			link.className = 'link link-offset-2 link-offset-3-hover';
+
+			link.href = cartContent[i].b;
+			link.target = '_blank';
+			link.textContent = cartContent[i].t;
+			linksContainer.appendChild(link);
+		}
+	}
+}
+
+function closeModal() {
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+}
+
+openBtn.addEventListener('click', openModal);
+
+closeBtn.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
+/* modal */
+
+/* 
+
+
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+		close();
+	}
+});
+ */
+/* If the user presses "Esc" and the modal is open, it closes it */

@@ -100,7 +100,7 @@
 			</nav>
 		</header>
 		<main>
-			<section id="carrito">
+			<section id="carrito" class="position-relative">
 				<div
 					class="container-sm align-items-center flex-column text-center p-4"
 				>
@@ -109,9 +109,9 @@
 					<div class="shooping-container gap-4">
 						<div class="cart-container pink-borders rounded-4 p-3">
 							<div class="book-data-headers">
-								<h5 class="me-5 text-start">Producto</h5>
-								<h5 class="me-auto ms-auto">Precio</h5>
-								<h5 class="me-auto ms-auto opacity-0">X</h5>
+								<h2 class="h5 me-5 text-start">Producto</h2>
+								<h2 class="h5 me-auto ms-auto">Precio</h2>
+								<span class="me-auto ms-auto opacity-0">X</span>
 							</div>
 							<div class="product-list"></div>
 						</div>
@@ -125,9 +125,22 @@
 								<p>Total</p>
 								<p id="total-price" class="price"></p>
 							</div>
-							<div class="btn focus-ring pink-borders w-100">Comprar</div>
+							<div id="buyBtn" class="btn focus-ring pink-borders w-100">
+								Comprar
+							</div>
 						</div>
 					</div>
+					<div id="modal" class="pink-borders rounded-3 p-3 hidden">
+						<h3>Gracias por elegirnos!</h3>
+						<p class="text-center text-white-50 m-0">
+							Puedes encontrar tus libros en los siguientes links:
+						</p>
+						<div class="links-container py-4"></div>
+						<div id="closeBtn" class="btn focus-ring pink-borders w-100">
+							Cerrar
+						</div>
+					</div>
+					<div class="overlay hidden"></div>
 				</div>
 			</section>
 		</main>
@@ -135,7 +148,7 @@
 			<div
 				class="container-md d-flex flex-column align-items-center justify-content-around flex-md-row align-items-md-start gap-md-3"
 			>
-				<div id="container-logo" class="">
+				<div id="container-logo">
 					<span
 						id="footer-logo"
 						class="text-center d-block text-md-start text-light fs-1"

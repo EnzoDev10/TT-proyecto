@@ -6,7 +6,8 @@
 }
 
 .cart-container,
-.checkout {
+.checkout,
+#modal {
 	background: var(--terciary-bg-color);
 	max-width: 400px;
 	min-width: 325px;
@@ -75,6 +76,55 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+}
+
+/* ! terminar el modal que da los links para los libros. */
+
+#modal {
+	display: initial;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 500ms ease-out;
+	z-index: 2;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+	z-index: 1;
+	transition: opacity 500ms ease-out;
+	opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
+	display: none;
+}
+
+.links-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.link {
+	color: white;
+	display: inline-block;
+	text-decoration-color: var(--border-color);
+	transition: transform 250ms, text-decoration 250ms;
+}
+
+.link:hover {
+	transform: translateY(-3px);
 }
 
 @media screen and (min-width: 768px) {

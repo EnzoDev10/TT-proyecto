@@ -75,6 +75,7 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 					i: booksData[i].formats['image/jpeg'],
 					t: shorterTitles(booksData[i].title),
 					a: booksData[i].authors[0].name,
+					b: booksData[i].formats['text/html'],
 					p: randomPrice,
 				};
 
