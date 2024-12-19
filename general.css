@@ -40,15 +40,11 @@
 
 header,
 footer {
-	background-image: url(assets/bg/background.jpg);
+	background-image: url(assets/bg/background.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-}
-
-.logo-img {
-	max-height: 50px;
 }
 
 ul {

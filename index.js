@@ -77,6 +77,8 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 					p: Math.floor(Math.random() * (100 - 10 + 1)),
 				};
 				cardDiv.className = 'book';
+				const lazy = 'loading="lazy"';
+
 				cardDiv.innerHTML = `
             <div class="card mb-3 rounded-4 pink-borders">
 				<div class="row g-0">
@@ -84,7 +86,7 @@ function fetchBooks(subject = '', nameToShowcase = 'Mas Populares') {
 						<img
 							src="${bookData.i}"
 							alt="${bookData.t}"
-							class=""
+							${i > 0 ? lazy : ''}
 						/>
 					</div>
 					<div class="col-md-8">
