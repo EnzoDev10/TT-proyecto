@@ -1,10 +1,43 @@
+.dropdown-menu {
+	background-color: var(--primary-bg-color);
+	--bs-body-color: #fff;
+}
+
+.dropdown-item {
+	--bs-dropdown-link-hover-color: #000;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+	color: var(--bs-dropdown-link-color);
+	--bs-dropdown-link-hover-bg: #transparent;
+}
+
+.drop-btn:hover,
+.drop-btn:focus {
+	transform: translateY(-3px);
+	--bs-border-width: 3px;
+}
+
+#current-topic {
+	min-height: 35px;
+}
+
+#books-container {
+	min-height: 3350px;
+	position: relative;
+}
+
 .loader {
 	width: 225px;
 	height: 225px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	padding-top: 35px;
 }
 
@@ -40,32 +73,8 @@
 	}
 }
 
-#current-topic {
-	min-height: 35px;
-}
-
-.dropdown-menu {
-	background-color: var(--primary-bg-color);
-	--bs-body-color: #fff;
-}
-
-.dropdown-item {
-	--bs-dropdown-link-hover-color: #000;
-}
-
-.dropdown-item:focus,
-.dropdown-item:hover {
-	color: var(--bs-dropdown-link-color);
-	--bs-dropdown-link-hover-bg: #transparent;
-}
-
-.drop-btn:hover,
-.drop-btn:focus {
-	transform: translateY(-3px);
-	--bs-border-width: 3px;
-}
-
 .card {
+	min-width: 248px;
 	max-width: 250px;
 	background-color: var(--primary-bg-color);
 }
@@ -97,10 +106,6 @@
 
 .review.small {
 	background-color: #38293d;
-}
-
-.profile {
-	max-width: 50px;
 }
 
 @keyframes Rotation {
