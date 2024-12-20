@@ -120,6 +120,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	#books-container {
+		min-height: 1530px;
+	}
+
 	.card {
 		max-width: 450px;
 		min-width: 450px;
@@ -142,5 +146,11 @@
 
 	.erik {
 		grid-column: 2 / 4;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#books-container {
+		min-height: 750px;
 	}
 }
